@@ -37,6 +37,4 @@ Route::get("/myposts",[PostController::class, 'myPosts'])->middleware('auth');
 Route::get("/edit/{id}",[PostController::class, 'edit'])->middleware('auth');
 Route::post("/edit/{id}",[PostController::class, 'editpost'])->middleware('auth');
 Route::post("/delete/{id}",[PostController::class, 'destroy'])->middleware('auth');
-
-
-                /*****************Page Routes*********** */      
+  
