@@ -18,6 +18,9 @@
                 <li><a href="/create">Create Posts</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
+            <ul>
+                <li><strong>{{Auth::user()->username}}</strong></li>
+            </ul>
         </nav>
         @else
         <nav>

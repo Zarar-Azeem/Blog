@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -12,7 +13,10 @@ class PostController extends Controller
         return view('posts.index', ['posts'=> Post::all()]);
     }
     public function post($id){
-        return view('posts.singlepost',['post'=> Post::findOrFail($id)]);
+        return view('posts.singlepost',[
+            'post'=> Post::findOrFail($id),
+            'comments'=>Comment::where('post_id',$id)->get()
+        ]);
     }
     public function create(){
         return view('posts.create');

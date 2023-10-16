@@ -34,6 +34,10 @@ ul li a{
     font-size: large;
     color: black;
 }
+
+a{
+    text-decoration: none;
+}
 .main{
     display: flex;
     justify-content: center;
@@ -180,3 +184,42 @@ ul li a{
     border-radius: 2rem;
 }
 
+.comment{
+    margin-top: 1rem;
+    line-height: 1rem;
+    border-radius: 1rem;
+    padding: 0.45rem;
+    border: 1px solid black;
+}
+.comment:focus{
+    outline-style: none;
+}
+.single-comment{
+    background-color: bisque;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin:1rem 0;
+}
+.single-comment small{
+    margin-top: 0.2rem;
+}
+.comments-section{
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 0.45rem;
+}
+.comment-input{
+    margin-left:1rem;
+}
+.comment-input button{
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.45rem;
+    cursor: pointer;
+}
+.comment-input button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.2s;
+}

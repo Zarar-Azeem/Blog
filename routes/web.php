@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -38,3 +39,7 @@ Route::get("/edit/{id}",[PostController::class, 'edit'])->middleware('auth');
 Route::post("/edit/{id}",[PostController::class, 'editpost'])->middleware('auth');
 Route::post("/delete/{id}",[PostController::class, 'destroy'])->middleware('auth');
   
+        /*****************Comments Routes*********** */    
+
+
+Route::post('/post/{id}/comment', [CommentController::class, 'store'])->middleware('auth');
