@@ -21,5 +21,22 @@ class CommentController extends Controller
         Comment::create($incoming);
         return redirect()->route('singlepost', ['id'=>$id]);
     }
+
+    public function delete($id, $cid){
+        $comment = Comment::findOrFail($cid);
+        $comment->delete();
+        return redirect()->route('singlepost', ['id'=>$id]);
+    }
+    public function update(Request $request, $id, $cid){
+        $incoming = $request->validate([
+            "cmt_text" =>"required"
+        ]);
+        $comment = Comment::findOrFail($cid);
+        $comment->update($incoming);
+        return redirect()->route('singlepost', ['id'=>$id]);
+    }
+    public function edit($id){
+        return redirect()->route('comments.edit', ['id'=>$id]);
+    }
     
 }

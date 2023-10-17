@@ -34,7 +34,7 @@
                     @endif
                     @if (Auth::id() == $comment->user->id)
                     <div class="comments-utils">
-                        <form  action="/post/{{$post['id']}}/comment/{{$comment->id}}" method="post">
+                        <form  action="/post/{{$post['id']}}/comment" method="post">
                             @csrf
                             @method('put')
                             <button type="submit" >Edit</button>
@@ -48,7 +48,7 @@
                     @endif
                     </div>
                     <div>
-                        <p name="cmt_text">{{$comment->cmt_text}}</p>
+                        <input name="cmt_text" value="{{$comment->cmt_text}}">{{$comment->cmt_text}}</input>
                     </div>
                 </div>
             @endforeach

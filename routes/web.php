@@ -43,3 +43,6 @@ Route::post("/delete/{id}",[PostController::class, 'destroy'])->middleware('auth
 
 
 Route::post('/post/{id}/comment', [CommentController::class, 'store'])->middleware('auth');
+Route::delete('/post/{id}/comment/{cid}', [CommentController::class, 'delete'])->middleware('auth');
+Route::get('/post/{id}/comment', [CommentController::class, 'edit'])->middleware('auth');
+Route::put('/post/{id}/comment/{cid}', [CommentController::class, 'update'])->middleware('auth');

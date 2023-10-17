@@ -223,3 +223,13 @@ a{
     color: white;
     transition: 0.2s;
 }
+.comments-utils{
+    display: flex;
+    flex-direction: row;
+}
+.comments-utils form button{
+    margin-right: 0.5rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}
