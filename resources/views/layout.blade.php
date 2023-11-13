@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ URL::to('css/style.css') }}">
+    <!-- Alpines CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js"></script>
+    <!-- FontAwesome CDN -->
+    <script src="https://kit.fontawesome.com/0f29da6843.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-        
         @auth
         <nav>
             <ul>
@@ -16,11 +19,13 @@
                 <li><a href="/home">Home</a></li>
                 <li><a href="/myposts">My Posts</a></li>
                 <li><a href="/create">Create Posts</a></li>
-                <li><a href="/logout">Logout</a></li>
             </ul>
-            <ul>
-                <li><strong>{{Auth::user()->username}}</strong></li>
-            </ul>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-user"></i>{{Auth::user()->username}}</button>
+                <div class="dropdown-content">
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
         </nav>
         @else
         <nav>

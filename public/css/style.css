@@ -6,13 +6,18 @@
     font-family: 'Inter', sans-serif;
 }
 
+body{
+    background-color: #F3EEEA;
+}
+
 
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 5rem;
-    border-bottom: 1px solid black;
+    background-color: #B0A695;
+    color: white;
 }
 
 h1{
@@ -20,9 +25,9 @@ h1{
 }
 ul{
     display: flex;
-    align-items: center;
-    
+    align-items: center;   
 }
+
 ul li{
     list-style: none;
     margin: 1rem;
@@ -32,12 +37,41 @@ ul li a{
     font-weight: bold;
     text-decoration: none;
     font-size: large;
-    color: black;
+    color: white;
 }
 
 a{
     text-decoration: none;
 }
+
+
+.user_profile_button button:hover{
+    background-color: #EBE3D5;
+    color: black;
+    
+}
+
+.dropbtn i{
+    padding: 0.5rem 0.5rem;
+    margin-right: 1rem;
+    border-radius: 16px;
+    border: 1px solid white;
+    color: white;
+}
+
+.dropdownbtn i:hover{
+    border: 1px solid black;
+    color: black;
+}
+
+.dropdown_menu{
+    display: block;
+    position: absolute;
+    z-index: 999;
+    top: 5rem;
+    background-color: #776B5D;
+}
+
 .main{
     display: flex;
     justify-content: center;
@@ -59,7 +93,10 @@ a{
 .create-container{
     width: 100%;
 }
-
+.post-card h3 a{
+    color: black;
+    border-bottom: 1px solid black;
+}
 
 
 .form-container{
@@ -89,6 +126,7 @@ a{
     line-height: 3rem;
     border: 1px solid rgb(94, 92, 92);
     border-radius: 5rem;
+    background-color: #EBE3D5;
     margin: 1rem 0;
     padding:0 2rem ;
 
@@ -102,21 +140,22 @@ a{
     height: 3rem;
     border: 1px solid rgb(94, 92, 92);
     border-radius: 5rem;
+    background-color:#B0A695;
 }
 
 .submit:hover{
     transition: 0.2s;
     color: white;
-    background-color: black;
+    background-color: #776B5D;
     cursor: pointer;
 }
 
 .post-card{
-     width: 80%;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-    }
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .post-card h3{
     font-size: larger;
@@ -145,6 +184,7 @@ a{
     font-size: medium;
 }
 .create input{
+    background-color: #EBE3D5;
     font-size: medium;
     border: 1px solid white;
     line-height: 3rem;
@@ -154,6 +194,7 @@ a{
     padding:0 1rem ;
 }
 .create textarea{
+    background-color: #EBE3D5;
     font-size: medium;
     border: 1px solid white;
     line-height: 1.5rem;
@@ -168,6 +209,7 @@ a{
     display: flex;
 }
 .utils-btns a button {
+    background-color: #B0A695;
     margin:0rem 1rem 0rem 0rem;
     font-size: medium;
     padding: 0.4rem;
@@ -176,12 +218,16 @@ a{
     border-radius: 2rem;
 }
 .utils-btns form button {
+    background-color: #B0A695;
     margin:0rem 1rem 0rem 0rem;
     font-size: medium;
     padding: 0.4rem;
     border: none;
     cursor: pointer;
     border-radius: 2rem;
+}
+.utils-btns form button:hover {
+    color: red;
 }
 
 .comment{
@@ -190,12 +236,14 @@ a{
     border-radius: 1rem;
     padding: 0.45rem;
     border: 1px solid black;
+    background-color: #EBE3D5;
 }
+
 .comment:focus{
     outline-style: none;
 }
 .single-comment{
-    background-color: bisque;
+    background-color: #EBE3D5;
     border: none;
     border-radius: 1rem;
     padding: 0.5rem;
@@ -209,17 +257,27 @@ a{
     border-radius: 1rem;
     padding: 0.45rem;
 }
+
 .comment-input{
     margin-left:1rem;
 }
+
+.comment-input input{
+    border: none;
+    outline: none;
+    padding: 0.75rem;
+}
+
 .comment-input button{
-    border: 1px solid black;
+    background-color: #B0A695;
+    border: none;
+    margin-left: 0.5rem;
     border-radius: 1rem;
-    padding: 0.45rem;
+    padding: 0.75rem;
     cursor: pointer;
 }
 .comment-input button:hover{
-    background-color: black;
+    background-color: #B0A695;
     color: white;
     transition: 0.2s;
 }
@@ -228,8 +286,58 @@ a{
     flex-direction: row;
 }
 .comments-utils form button{
+    background-color: #B0A695;
     margin-right: 0.5rem;
+    padding: 0.25rem;
     border-radius: 2rem;
     border: none;
     cursor: pointer;
+}
+
+.dropbtn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 16px;
+    background-color: #776B5D;
+    color: white;
+}
+
+.dropdwonbtn:hover{
+    background-color: #EBE3D5;
+    color: black;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #776B5D;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {
+    background-color: #B0A695;
+    border-radius: 10px;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 10px;
 }

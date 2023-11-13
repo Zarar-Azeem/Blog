@@ -10,7 +10,8 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 class PostController extends Controller
 {
     public function index(){
-        return view('posts.index', ['posts'=> Post::all()]);
+        return view('posts.index',
+         ['posts'=> Post::all(),'comments'=> Comment::all()]);
     }
     public function post($id){
         return view('posts.singlepost',[

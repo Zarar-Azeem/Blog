@@ -9,11 +9,11 @@
             <p style="margin-bottom: 1rem">{{$post->text}}</p>
             <div class="utils-btns">
                 <a href="/edit/{{$post['id']}}">
-                    <button style="background-color:bisque">Edit</button>
+                    <button style="background-color:#B0A695">Edit</button>
                 </a> 
                 <form action="/delete/{{$post['id']}}" method="post">
                     @csrf
-                    <button style="background-color:bisque">Delete</button>
+                    <button style="background-color:#B0A695">Delete</button>
                 </form>
             </div>
             <hr style="margin-top: 2rem">
