@@ -45,7 +45,10 @@ class UserController extends Controller
             return redirect('/home');                      
         }
         else{
-            return redirect('/');
+            return redirect('/')->withErrors([
+                'email'=>'Invalid Credentials',
+                'password'=>'Invalid Credentials'
+        ]);
         }
     }
 }
