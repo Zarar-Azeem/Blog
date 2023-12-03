@@ -22,7 +22,7 @@ Route::get('/', [UserController::class, 'login'])->name('login');
 Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::get('/logout', [UserController::class, 'logout']);
 
-                    //Functions Routes
+                    //User-Functions Routes
 
 Route::post('/register-user', [UserController::class, 'registerUser']);
 Route::post('/login-user', [UserController::class, 'loginUser']);
